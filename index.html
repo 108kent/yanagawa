@@ -10,15 +10,16 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Ghost of Yanagawa.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Ghost of Yanagawa" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="F79FA515-2519-4FBF-9895-52159E940571" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="550,275" size="100,100">(set: $hasLantern to false)
-You are in Yanagawa, and it&#39;s getting dark. You see three places you can explore:
-* [[A mysterious alley]]
-* [[The riverside]]
-* [[A local shop]]
+目の前に少女がいます。どうしますか？
+&lt;img src=&quot;https://yahtec-japan.com/wp-content/uploads/2023/04/MTXX_MR20230414_210608669__01-732x1024.jpg&quot; alt=&quot;少女&quot; width=&quot;300&quot;&gt;
+* [[声をかける]]
+* [[無視する]]
+* [[殴る]]
 
-</tw-passagedata><tw-passagedata pid="2" name="A mysterious alley" tags="" position="425,400" size="100,100">The alley is dark, and you can barely see anything. You might need some light to explore further.
-* [[Start]]</tw-passagedata><tw-passagedata pid="3" name="The riverside" tags="" position="550,400" size="100,100">You walk along the riverbank and spot something glowing in the water. It&#39;s a lantern! 
+</tw-passagedata><tw-passagedata pid="2" name="声をかける" tags="" position="425,400" size="100,100">無視されました
+* [[Start]]</tw-passagedata><tw-passagedata pid="3" name="無視する" tags="" position="550,400" size="100,100">なんて薄情な人なの！
 (set: $hasLantern to true)
-* [[Start]]</tw-passagedata><tw-passagedata pid="4" name="A local shop" tags="" position="675,400" size="100,100">The shopkeeper greets you with a smile and says, &quot;It&#39;s dangerous to go alone. Do you have a lantern?&quot;
+* [[Start]]</tw-passagedata><tw-passagedata pid="4" name="殴る" tags="" position="675,400" size="100,100">痛い！！
 (if: $hasLantern)[You show him the lantern, and he nods approvingly. &quot;You’re well-prepared.&quot;]\
 (else:)[&quot;You should find a lantern before heading out at night.&quot;]
 * [[Leave the shop]]</tw-passagedata><tw-passagedata pid="5" name="Leave the shop" tags="" position="675,525" size="100,100"></tw-passagedata></tw-storydata>
