@@ -22,27 +22,21 @@
 * [[Start]]</tw-passagedata><tw-passagedata pid="4" name="殴る" tags="" position="675,400" size="100,100">痛い！！
 (if: $hasLantern)[You show him the lantern, and he nods approvingly. &quot;You’re well-prepared.&quot;]\
 (else:)[&quot;You should find a lantern before heading out at night.&quot;]
-* [[Leave the shop]]</tw-passagedata>
-<tw-passagedata pid="5" name="Leave the shop" tags="" position="675,525" size="100,100">
-  [[パスワードを入力する->PasswordCheck]]
-</tw-passagedata>
+* [[Leave the shop]]</tw-passagedata><tw-passagedata pid="5" name="Leave the shop" tags="" position="675,525" size="100,100">
+[[パスワードを入力する-&gt;PasswordCheck]]
+</tw-passagedata><tw-passagedata pid="6" name="PasswordCheck" tags="" position="600,650" size="100,100">ここにパスワードを入力してください。&lt;br&gt;
+&lt;input type=&quot;text&quot; data-variable=&quot;$password&quot;&gt; &lt;button&gt;確認&lt;/button&gt;
 
-<tw-passagedata pid="6" name="PasswordCheck" tags="" position="600,650" size="100,100">
-  ここにパスワードを入力してください。<br>
-  <input type="text" id="passwordInput"> <button id="checkPasswordButton">確認</button>
-
-  (click: "#checkPasswordButton")[
-    (set: $password to (str: (text: #passwordInput)))
-    (if: $password is "1234")[
-      正しいパスワードです。ドアが開きました！
-      * [[次に進む->Next]]
-    ]
-    (else:)[
-      パスワードが間違っています。最初からやり直してください。
-      * [[戻る->Start]]
-    ]
-  ]
-</tw-passagedata><tw-passagedata pid="7" name="Next" tags="" position="737.5,650" size="100,100">次の部屋</tw-passagedata></tw-storydata>
+(click: &quot;確認&quot;)[
+	(if: (str: $password) is &quot;1234&quot;)[
+		正しいパスワードです。ドアが開きました！
+		* [[次に進む-&gt;Next]]
+	]
+	(else:)[
+		パスワードが間違っています。最初からやり直してください。
+		* [[戻る-&gt;Start]]
+	]
+]</tw-passagedata><tw-passagedata pid="7" name="Next" tags="" position="737.5,650" size="100,100">次の部屋</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
